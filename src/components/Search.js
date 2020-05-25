@@ -4,7 +4,11 @@ const Search = props => {
   return (
     <div className="ui search">
       <div className="ui icon input">
-        <input className="prompt" onChange={() => {console.log("searching...")}} />
+        <input 
+          className="prompt"
+          value={props.search} 
+          onChange={(e) => {props.searchPokemon(e.target.value)}}
+        />
         <i className="search icon" />
       </div>
     </div>
